@@ -1,0 +1,9 @@
+<div id="search-component">
+	<h4>Friend Search</h4>
+	<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+	<div>
+		<div *ngFor="let friend of friends | async" (click)="gotoDetail(friend)" class="search-result">
+			{{friend.name}}
+		</div>
+	</div>
+</div>

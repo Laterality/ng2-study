@@ -1,0 +1,12 @@
+<div *ngIf="selectedFriend">
+	<h2>{{selectedFriend.name}}'s details</h2>
+	<div>
+		<label>id: </label>{{selectedFriend.id}}
+	</div>
+	<div>
+		<label>name: </label>
+		<input [(ngModel)]="selectedFriend.name" placeholder="name">
+	</div>
+	<button (click)="goBack()">Back</button>
+	<button (click)="save()">Save</button>
+</div>
